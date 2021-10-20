@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BOOTSTRAP 4 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" 
+    crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+    crossorigin="anonymous"></script>
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="../public/css/style.css">
+    <!--Iconos-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+</head>
+<body style="background-color: #9e9e9ea1">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #343F56;">
+            <div class="container ">
+              <a class="navbar-brand" href="#">
+                  <img src="../img/logoB.png" class="logo">
+              </a>
+            </div>
+          </nav>
+          
+    </header>
+    <div class="letra titulo" style="text-align-last: center">
+        <p>
+        <h1>SERVICIO DE PRÉSTAMOS</h1>
+        <p>
+    </div>
+    <section class="contenedor_borde letra">
+        <div class="modal-dialog  modal-lg " id="miModal">
+            <div class="col-xl-12 main-section navbar-brand">
+                <form action="#" method="POST" class="encuesta">
+                    <div class="col-lg-12 modal-content miconteiner" >
+                        <p>Califique según su satisfacción</p><br>
+
+                        <h5>1. Atención por parte del personal de la unidad</h5>
+                        <div class="rating-faces">
+                            <i class="bi bi-emoji-angry" style="cursor: pointer;" id="facep1"></i>
+                            <i class="bi bi-emoji-frown" style="cursor: pointer;" id="facep1"></i>
+                            <i class="bi bi-emoji-neutral" style="cursor: pointer;" id="facep1"></i>
+                            <i class="bi bi-emoji-smile" style="cursor: pointer;" id="facep1"></i>
+                            <i class="bi bi-emoji-laughing" style="cursor: pointer;" id="facep1"></i>
+                        </div><br>
+                        <h5>2. Procedimiento de préstamo</h5>
+                        <div class="rating-faces">
+                            <i class="bi bi-emoji-angry" style="cursor: pointer;" id="facep1"></i>
+                            <i class="bi bi-emoji-frown" style="cursor: pointer;" id="facep1"></i>
+                            <i class="bi bi-emoji-neutral" style="cursor: pointer;" id="facep1"></i>
+                            <i class="bi bi-emoji-smile" style="cursor: pointer;" id="facep1"></i>
+                            <i class="bi bi-emoji-laughing" style="cursor: pointer;" id="facep1"></i>
+                        </div><br>
+                        <h5>3. Disponibilidad de libros</h5>
+                        <div class="rating-faces">
+                            <i class="bi bi-emoji-angry" style="cursor: pointer;" id="facep1"></i>
+                            <i class="bi bi-emoji-frown" style="cursor: pointer;" id="facep1"></i>
+                            <i class="bi bi-emoji-neutral" style="cursor: pointer;" id="facep1"></i>
+                            <i class="bi bi-emoji-smile" style="cursor: pointer;" id="facep1"></i>
+                            <i class="bi bi-emoji-laughing" style="cursor: pointer;" id="facep1"></i>
+                        </div><br>
+                        <h5>4. Estado de los libros</h5>
+                        <div class="rating-faces">
+                            <i class="bi bi-emoji-angry" style="cursor: pointer;" id="facep1"></i>
+                            <i class="bi bi-emoji-frown" style="cursor: pointer;" id="facep1"></i>
+                            <i class="bi bi-emoji-neutral" style="cursor: pointer;" id="facep1"></i>
+                            <i class="bi bi-emoji-smile" style="cursor: pointer;" id="facep1"></i>
+                            <i class="bi bi-emoji-laughing" style="cursor: pointer;" id="facep1"></i>
+                        </div><br>
+                        <h5>5. Actualidad de los recursos</h5>
+                        <div class="rating-faces">
+                            <i class="bi bi-emoji-angry" style="cursor: pointer;" id="facep1"></i>
+                            <i class="bi bi-emoji-frown" style="cursor: pointer;" id="facep1"></i>
+                            <i class="bi bi-emoji-neutral" style="cursor: pointer;" id="facep1"></i>
+                            <i class="bi bi-emoji-smile" style="cursor: pointer;" id="facep1"></i>
+                            <i class="bi bi-emoji-laughing" style="cursor: pointer;" id="facep1"></i>
+                        </div><br>
+                        <h5>6. Dotación</h5>
+                        <div class="rating-faces">
+                            <i class="bi bi-emoji-angry" style="cursor: pointer;" id="facep1"></i>
+                            <i class="bi bi-emoji-frown" style="cursor: pointer;" id="facep1"></i>
+                            <i class="bi bi-emoji-neutral" style="cursor: pointer;" id="facep1"></i>
+                            <i class="bi bi-emoji-smile" style="cursor: pointer;" id="facep1"></i>
+                            <i class="bi bi-emoji-laughing" style="cursor: pointer;" id="facep1"></i>
+                        </div>
+                        
+                            
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">Comentarios o sugerencias</label>
+                            <textarea class="form-control" id="mensaje" name="mensaje" rows="5"></textarea>
+                        </div>
+                        <div class="mb-3"> 
+                            <br>             
+                              <input id="myButton" class="btn btn-primary botonE" type="submit" value="Enviar"/>
+                          </div>
+                    </div>
+                </form>     
+
+            </div>   
+
+        </div>
+    </section>
+</body>
+</html>

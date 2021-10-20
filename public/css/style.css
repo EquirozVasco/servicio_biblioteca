@@ -1,0 +1,70 @@
+.letra{
+    text-decoration: #343F56;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.titulo{
+    padding-bottom: 0px;
+    padding-top: 20px;
+}
+
+.logo{
+    width: 200px;
+    height: 60px;
+}
+
+.encuesta{
+    color: #343F56;
+    
+}
+
+
+.botonE{
+    background-color: #343F56;
+    border-color: #343F56;
+    width: 150px;
+    
+}
+
+input[type="submit"].botonE:hover{
+    background-color: #343f56cb;
+    border-color: #343f56a4;
+}
+
+.contenedor_borde{
+    padding-bottom: 50px; 
+    border-radius: 100%;
+}
+
+.miconteiner{
+    padding-left: 80px;
+    padding-top: 20px;
+    padding-right: 10px;
+    border-radius: 3%;
+}
+
+.miconteiner textarea{
+    width: 600px;
+}
+.rating-faces{
+    font-size: 0;
+    display: inline-block;
+}
+
+.rating-faces i{
+    padding: 20px;
+    text-decoration: none;
+	display: inline-block;
+	/* Volver a dar tamaño al texto */
+	font-size: 32px;
+	font-size: 2rem;
+	color: #888;
+}
+
+.rating-faces:hover i {
+	color: #FB9300;
+}
+
+.rating-faces > i:hover ~ i {
+	color: #888;
+}
