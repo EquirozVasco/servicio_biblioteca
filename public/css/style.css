@@ -1,3 +1,7 @@
+body {
+    background-color: #9e9e9ea1;
+}
+
 .letra{
     text-decoration: #343F56;
     font-family: 'Open Sans Condensed', sans-serif;
@@ -46,6 +50,8 @@ input[type="submit"].botonE:hover{
 .miconteiner textarea{
     width: 600px;
 }
+
+/*Prueba con rango de caras*/
 .rating-faces{
     font-size: 0;
     display: inline-block;
@@ -68,3 +74,30 @@ input[type="submit"].botonE:hover{
 .rating-faces > i:hover ~ i {
 	color: #888;
 }
+
+.mytype {
+    width: 300px;
+}
+
+/*Prueba con caras como tipo radio*/
+
+/* ESCONDER RADIO */
+[type=radio] { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* ESTILO DEL ICONO */
+  [type=radio] + i {
+    color: #888;
+    cursor: pointer;
+    font-size: 32px;
+  }
+  
+  /* CHECKED STYLES */
+  [type=radio]:checked + i{
+    color: #FB9300;
+  }
+

@@ -1,0 +1,31 @@
+{
+  "name": "servicio_biblioteca",
+  "version": "1.0.0",
+  "description": "Proyecto calificación servicio biblioteca",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "bootstrap-icons": "^1.6.1",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.14",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "nodemon services/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EquirozVasco/servicio_biblioteca.git"
+  },
+  "keywords": [],
+  "author": "JEDYS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EquirozVasco/servicio_biblioteca/issues"
+  },
+  "homepage": "https://github.com/EquirozVasco/servicio_biblioteca#readme"
+}
