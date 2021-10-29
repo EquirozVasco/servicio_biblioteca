@@ -247,4 +247,18 @@ a.botones:hover{
     color: white;
 }
 
+.myFooter{
+    background-color: #455d7a;
+    color: white;
+    height: 200px;
+    margin-top: 70px;
+}
+
+.myFooter a {
+    color: white;
+}
+
+.myFooter a:hover {
+    color: #f54748;
+}
 
