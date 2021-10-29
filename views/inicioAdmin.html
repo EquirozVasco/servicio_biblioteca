@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('partials/head.html'); %>
+    <title>Inicio de sesión</title>
+
+</head>
+<body>
+    <%- include('partials/header.html'); %>
+    <div class="container inicio">
+        <div class="row row-cols-3 justify-content-sm-center">
+          <div class="col" id="l1">
+            <h2 class="bienvenida">Accede al sistema</h2>
+            <br />
+            <div class="sesion">
+                <form method="POST" action="/Sesion">
+                    <div class="row justify-content-center">
+                        <div class="col-sm-8 myUser">
+                            <div class="fs-6">
+                                <i class="bi bi-person-circle"></i> 
+                                <label for="usuario" class="form-label">Usuario</label>
+                            </div>
+                            <input type="text" class="form-control" id="usuario" name="usuario">
+                          </div>
+                    </div><br>
+                    <div class="row justify-content-center">
+                        <div class="col-sm-8 myUser">
+                            <div class="fs-6">
+                                <i class="bi bi-lock-fill"></i>
+                                <label for="contrasena" class="form-label">Contraseña</label>
+                            </div>
+                            <input type="password" class="form-control" id="contrasena" name="contrasena">
+                          </div>
+                    </div><br>
+                    <div class="row justify-content-center">
+                        <input id="myButton" class="btn btn-primary botonE col-sm-3" type="submit" value="Acceder" />
+                    </div>
+                  </form>
+            </div>
+                        
+          </div>
+          <div class="col" id="l2">
+              <img class="img-fluid logoR" src="css/img/logoR.png">
+          </div>
+        </div>
+      </div>
+    
+</body>
+</html>

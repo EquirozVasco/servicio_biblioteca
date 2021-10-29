@@ -18,9 +18,15 @@
     </div>
     <section class="contenedor_borde letra">
         <div class="modal-dialog  modal-lg">
-            <div class="col-xl-12 main-section navbar-brand">
-                <form action="#" method="POST" class="encuesta" action="/Prestamo">
-                    <div class="col-lg-12 modal-content miconteiner">
+            <div class="container-sm main-section navbar-brand">
+                <form method="POST" class="encuesta" action="/Prestamo">
+                    <div class="container-sm modal-content miconteiner">
+                        <div class="salir">
+                            <a href="/Inicio"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+                                <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+                              </svg></a>
+                        </div>
                         <p>Seleccione el tipo de usuario</p>
                             <select class="form-select mytype" aria-label="Default select example" name="tipo">
                                 <option selected>Tipo de usuario</option>
@@ -31,7 +37,7 @@
                                 <option value="5">Externo</option>
                             </select><br>
                         <p>Califique según su satisfacción</p><br>
-
+                            
                         <h5>1. Atención por parte del personal de la unidad</h5>
                         <div>
                             <div class="form-check form-check-inline">
@@ -231,8 +237,8 @@
                             </div>      
                         </div>
                         
-                            
-                        <div class="mb-3">
+                        
+                        <div class="container-sm">
                             <label for="comentarios" class="form-label">Comentarios o sugerencias</label>
                             <textarea class="form-control" id="comentarios" name="comentarios" rows="5"></textarea>
                         </div>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <%- include('partials/head.html'); %>
+    <title>Biblioteca</title>
+  </head>
+
+  <body>
+    <%- include('partials/header.html'); %>
+
+    <div class="container inicio">
+      <div class="row row-cols-3 justify-content-sm-center">
+        <div class="col" id="l1">
+          <h2 class="bienvenida">Queremos conocer tu opinión</h2>
+          <br />
+          <div class="Cbotones">
+            <a class="btn btn-primary botones" href="/Prestamo" role="button"
+              >Préstamos</a
+            >
+            <a class="btn btn-primary botones" href="/Renovaciones" role="button"
+              >Renovaciones</a
+            >
+            <a class="btn btn-primary botones" href="/Espacios" role="button"
+              >Espacios</a
+            >
+            <a class="btn btn-primary botones" href="/Cubiculos" role="button"
+              >Reserva de Cubículos</a
+            >
+          </div>
+        </div>
+        <div class="col" id="l2">
+            <img class="img-fluid logoR" src="css/img/logoR.png">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

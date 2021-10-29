@@ -1,5 +1,6 @@
 body {
     background-color: #9e9e9ea1;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .letra{
@@ -41,14 +42,25 @@ input[type="submit"].botonE:hover{
 }
 
 .miconteiner{
-    padding-left: 80px;
+    padding: 10%;
+    /*padding-left: 80px;
     padding-top: 20px;
-    padding-right: 10px;
+    padding-right: 10px;*/
     border-radius: 3%;
 }
 
-.miconteiner textarea{
+/*.miconteiner textarea{
     width: 600px;
+}*/
+
+.respuesta{
+    padding-top: 50px;
+}
+
+#conRespuesta{
+    padding-top: 70px;
+    text-align: center;
+    height: 250px;
 }
 
 /*Prueba con rango de caras*/
@@ -100,4 +112,139 @@ input[type="submit"].botonE:hover{
   [type=radio]:checked + i{
     color: #FB9300;
   }
+
+  .bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+  }
+
+  .myFoot{
+      background-color: gray;
+
+  }
+
+  .salir{
+      text-align: right;
+      text-decoration: none;
+      float: left;
+      
+  }
+
+  .salir a{
+    color: #343F56;
+  }
+
+  .myModal{
+    padding-top: 10px;
+	justify-content: center;
+	height: 100vh;
+    align-items: center;
+}
+
+.contenedor-dividido{
+    display: flex;  /*Dividir la pantalla*/
+    background-color:#ffffffe5;
+	border-radius: 20px;
+    margin: 1.5rem;
+	overflow: hidden;
+	width: 600;
+	height: 400px;
+}
+
+.titulo2{
+	margin: 1rem 0;
+	color: var(black-text);
+    text-indent: 8px;
+    font-size: 25px;
+    margin:0 auto; 
+    padding-top: 50%;
+}
+
+.izquierda{
+    background: #455d7a;  
+    display: grid;
+    grid-template-rows: 30% 70%;
+    text-align: left;
+    text-align: right;
+    text-align: center;
+    text-align: center;
+    text-indent: 8px;
+    align-items: center;
+    width: 50%;
+    height: 100vh;
+    padding-top: 2px;
+}
+
+.derecha{
+    padding-top: 18%;
+    background: #ffffffe5;
+    display: flex;  /*Adapta toda la pantalla*/
+    justify-content: center;    /*centrar de manera horizontal*/
+    /*align-items:center;     */   /*centrar de manera vertical*/
+    width: 50%;
+    height: 100vh;
+}
+
+
+.botones{
+    border-color: transparent;
+    background-color: white;
+    color: #000;
+    padding: 8px;     /*Alto y ancho del boton*/
+    text-decoration: none;   /*Elimina lo subrayado*/
+    border-radius: 50px;
+    text-align: center;
+    justify-content: center;
+    font-size: 17px;
+    margin: 0.2rem 0;
+    padding-top: 2px;
+    width: 200px;
+
+}
+
+a.botones:hover{
+    background-color: #f54748;
+    border-color: #f54748;
+}
+
+
+.logoR{
+    width: 300px;
+    height: 100px;  
+}
+
+.bienvenida{
+    color: white;
+    text-align: center;
+}
+
+.Cbotones{
+    text-align: center;
+}
+
+.inicio{
+    margin-top: 5%;
+}
+
+#l1{
+    padding-top: 5%;
+    background-color: #455d7a;
+    height: 400px;
+    border-top-left-radius: 10%;
+    border-bottom-left-radius: 10%;
+}
+
+#l2{
+    padding-top: 12%;
+    padding-left: 40px;
+    background-color: #ffffffe5;
+    height: 400px;
+    border-top-right-radius: 10%;
+    border-bottom-right-radius: 10%;
+}
+
+.sesion{
+    color: white;
+}
+
 
