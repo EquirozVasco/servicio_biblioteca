@@ -7,8 +7,64 @@
     <%- include('partials/head.html'); %>
     <title>Biblioteca</title>
 </head>
-<body>
-    <%- include('partials/header.html'); %>
+<body class="letra">
+    <%- include('partials/headerAdmin.html'); %>
+
+    <div class="container reportes">
+        <div class="row row-cols-2 justify-content-sm-center">
+          <div class="col" id="report">
+            <div class="salir">
+                <a href="/Admin"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+                    <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+                  </svg></a>
+            </div>
+            <div class="fs-3 rep">
+                <i class="bi bi-file-earmark-bar-graph-fill"></i>
+                <label class="form-label">Genera Reportes</label>
+            </div>
+            <br />
+            <div class="datos">
+                <form method="POST" action="/Reportes">
+                    <div class="row justify-content-center">
+                        <div class="col-sm-9 myUser">
+                            <div class="fs-6">
+                                <label for="fechaI" class="form-label">Fecha inicial</label>
+                            </div>
+                            <input type="date" class="form-control" name="fechaI" id="fechaI" required>
+                          </div>
+                    </div><br>
+                    <div class="row justify-content-center">
+                        <div class="col-sm-9 myUser">
+                            <div class="fs-6">
+                                
+                                <label for="fechaF" class="form-label">Fecha final</label>
+                            </div>
+                            <input type="date" class="form-control" id="fechaF" name="fechaF" required>
+                          </div>
+                    </div><br>
+                    <div class="row justify-content-center">
+                        <div class="col-sm-9 myUser">
+
+                                <label for="tipo" class="form-label">Seleccione sobre que encuesta quiere el reporte</label>
+                                <select class="form-select" aria-label="Default select example" name="tipo" required>
+                                    <option selected>Selecciona</option>
+                                    <option value="1">Préstamos</option>
+                                    <option value="2">Renovaciones</option>
+                                    <option value="3">Espacios de la Biblioteca</option>
+                                    <option value="4">Reservar de cubículos</option>
+                                  </select>                   
+
+                          </div>
+                    </div><br>
+                    
+                    <div class="row justify-content-center">
+                        <input id="myButton" class="btn btn-primary botonE col-sm-3" type="submit" value="Generar" />
+                    </div>
+                  </form>
+            </div>          
+          </div>
+      </div>
     
 </body>
 </html>

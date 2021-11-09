@@ -21,6 +21,31 @@ const execute = async (sql) =>{
     conexion.end();
     return res;
 };
+
+const execute2 = async (sql) =>{
+  const conexion = mysql.createConnection({
+      host: 'localhost',
+      database: 'bibliotecausuarios',
+      user: 'root',
+      password: '',
+    });
+  conexion.connect(function(error) {
+    if (error) {
+      throw error
+    }else{
+      console.log('Conexión exitosa')
+    }
+  });
+  var result
+  const res = conexion.query(sql, function(err, rows, fields) {
+    if (err) throw err;
+    console.log('The solution is: ', rows[0]);
+    result = rows[0]
+  });
+  console.log("Probando",result)
+  conexion.end();
+  return res
+};
  
- module.exports = {execute};
+ module.exports = {execute, execute2};
  
