@@ -403,5 +403,68 @@ router.post("/Reportes", async (req, res) => {
 
 
 //router.get("/reportes", informe.getInfoCubiculos);
+//Gestiòn de Usuarios
+router.get('/registrousuarios', (req, res) => {
+  res.render('RegisterUser.html');
+});
+
+router.post("/registrousuarios", async (req, res) => {
+  let { nombre,
+    apellido,
+    correo, 
+    usuario,
+    vuelve,
+    contraseña} = req.body;
+
+  
+
+  let errors = [];
+  
+  console.log({
+    nombre,
+    apellido,
+    correo, 
+    usuario,
+    vuelve,
+    contraseña
+  });
+
+    if(nombre == "" || apellido == "" || correo == "" || usuario == "" || vuelve == "" || contraseña == ""){
+      errors.push({ message: "Espacio Vacio" });
+    }
+    
+
+
+    if(errors.length > 0){
+      alert("Complete todos los campos")
+      //res.render('encuestaRenovacion.html', {errors})
+
+    } else if(vuelve != contraseña) {
+      alert("las contraseñas no coinciden, vuelva a ingresarla por favor.")
+
+    }else {
+
+      let sql = `INSERT INTO usuario
+      (nombre,
+        correo,
+        usuario,
+        contraseña,
+        estado)
+        VALUES
+      ('${nombre + " " + apellido}',
+      '${correo}',
+      '${usuario}',
+      '${contraseña}',
+      '${true}');`
+    
+      await _pg.executeClient(sql);
+
+      //Envia Informacion a la Base de datos y esperar Respuesta
+      alert("¡Usuario registrado con éxito!")
+
+
+      res.redirect("/registrousuarios");
+    }
+});
 
 module.exports = router;
