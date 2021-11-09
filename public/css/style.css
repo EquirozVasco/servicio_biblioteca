@@ -126,7 +126,8 @@ input[type="submit"].botonE:hover{
   .salir{
       text-align: right;
       text-decoration: none;
-      float: left;
+      float: right;
+      margin-right: 3%;
       
   }
 
@@ -243,6 +244,27 @@ a.botones:hover{
     border-bottom-right-radius: 10%;
 }
 
+#report{
+    padding-top: 2%;
+    background-color: #ffff;
+    color: #000;
+    height: 470px;
+    border-radius: 10%;
+}
+
+.reportes{
+    padding-top: 5%;
+}
+
+.datos{
+    color: #000;
+}
+
+.rep{
+    color: #343f56;
+    text-align: center;
+}
+
 .sesion{
     color: white;
 }
@@ -261,4 +283,19 @@ a.botones:hover{
 .myFooter a:hover {
     color: #f54748;
 }
+
+.opciones{
+    text-decoration: none;
+    color: #343f56;
+}
+
+.opciones:hover{
+    color: #f54748;
+}
+
+.op{
+    text-align: center;
+    /*margin: 4%;*/
+}
+
 

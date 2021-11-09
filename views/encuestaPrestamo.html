@@ -7,7 +7,7 @@
     <%- include('partials/head.html'); %>
     <title>Servicio de Préstamos</title>
 </head>
-<body>
+<body class="letra">
 
     <%- include('partials/header.html'); %>
 
@@ -28,7 +28,7 @@
                               </svg></a>
                         </div>
                         <p>Seleccione el tipo de usuario</p>
-                            <select class="form-select mytype" aria-label="Default select example" name="tipo">
+                            <select class="form-select mytype" aria-label="Default select example" name="tipo" required>
                                 <option selected>Tipo de usuario</option>
                                 <option value="1">Estudiante</option>
                                 <option value="2">Docente</option>
@@ -42,31 +42,31 @@
                         <div>
                             <div class="form-check form-check-inline">
                                 <label>
-                                    <input class="form-check-input" type="radio" name="atencionp" id="v1" value="1">
+                                    <input class="form-check-input" type="radio" name="atencionp" id="v1" value="1" required>
                                     <i class="bi bi-emoji-angry"></i>
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <label>
-                                    <input class="form-check-input" type="radio" name="atencionp" id="v2" value="2">
+                                    <input class="form-check-input" type="radio" name="atencionp" id="v2" value="2" required>
                                     <i class="bi bi-emoji-frown"></i>
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <label>
-                                    <input class="form-check-input" type="radio" name="atencionp" id="v3" value="3">
+                                    <input class="form-check-input" type="radio" name="atencionp" id="v3" value="3" required>
                                     <i class="bi bi-emoji-neutral"></i>
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <label>
-                                    <input class="form-check-input" type="radio" name="atencionp" id="v4" value="4">
+                                    <input class="form-check-input" type="radio" name="atencionp" id="v4" value="4" required>
                                     <i class="bi bi-emoji-smile"></i>
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <label>
-                                    <input class="form-check-input" type="radio" name="atencionp" id="v5" value="5">
+                                    <input class="form-check-input" type="radio" name="atencionp" id="v5" value="5" required>
                                     <i class="bi bi-emoji-laughing"></i>
                                 </label>
                             </div>      
@@ -75,31 +75,31 @@
                         <div>
                             <div class="form-check form-check-inline">
                                 <label>
-                                    <input class="form-check-input" type="radio" name="procesop" id="v1" value="1">
+                                    <input class="form-check-input" type="radio" name="procesop" id="v1" value="1" required>
                                     <i class="bi bi-emoji-angry"></i>
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <label>
-                                    <input class="form-check-input" type="radio" name="procesop" id="v2" value="2">
+                                    <input class="form-check-input" type="radio" name="procesop" id="v2" value="2" required>
                                     <i class="bi bi-emoji-frown"></i>
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <label>
-                                    <input class="form-check-input" type="radio" name="procesop" id="v3" value="3">
+                                    <input class="form-check-input" type="radio" name="procesop" id="v3" value="3" required>
                                     <i class="bi bi-emoji-neutral"></i>
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <label>
-                                    <input class="form-check-input" type="radio" name="procesop" id="v4" value="4">
+                                    <input class="form-check-input" type="radio" name="procesop" id="v4" value="4" required>
                                     <i class="bi bi-emoji-smile"></i>
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <label>
-                                    <input class="form-check-input" type="radio" name="procesop" id="v5" value="5">
+                                    <input class="form-check-input" type="radio" name="procesop" id="v5" value="5" required>
                                     <i class="bi bi-emoji-laughing"></i>
                                 </label>
                             </div>      
@@ -108,31 +108,31 @@
                         <div>
                             <div class="form-check form-check-inline">
                                 <label>
-                                    <input class="form-check-input" type="radio" name="disponibilidad" id="v1" value="1">
+                                    <input class="form-check-input" type="radio" name="disponibilidad" id="v1" value="1" required>
                                     <i class="bi bi-emoji-angry"></i>
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <label>
-                                    <input class="form-check-input" type="radio" name="disponibilidad" id="v2" value="2">
+                                    <input class="form-check-input" type="radio" name="disponibilidad" id="v2" value="2" required>
                                     <i class="bi bi-emoji-frown"></i>
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <label>
-                                    <input class="form-check-input" type="radio" name="disponibilidad" id="v3" value="3">
+                                    <input class="form-check-input" type="radio" name="disponibilidad" id="v3" value="3" required>
                                     <i class="bi bi-emoji-neutral"></i>
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <label>
-                                    <input class="form-check-input" type="radio" name="disponibilidad" id="v4" value="4">
+                                    <input class="form-check-input" type="radio" name="disponibilidad" id="v4" value="4" required>
                                     <i class="bi bi-emoji-smile"></i>
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <label>
-                                    <input class="form-check-input" type="radio" name="disponibilidad" id="v5" value="5">
+                                    <input class="form-check-input" type="radio" name="disponibilidad" id="v5" value="5" required>
                                     <i class="bi bi-emoji-laughing"></i>
                                 </label>
                             </div>      
@@ -141,31 +141,31 @@
                         <div>
                             <div class="form-check form-check-inline">
                                 <label>
-                                    <input class="form-check-input" type="radio" name="estadoLibros" id="v1" value="1">
+                                    <input class="form-check-input" type="radio" name="estadoLibros" id="v1" value="1" required>
                                     <i class="bi bi-emoji-angry"></i>
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <label>
-                                    <input class="form-check-input" type="radio" name="estadoLibros" id="v2" value="2">
+                                    <input class="form-check-input" type="radio" name="estadoLibros" id="v2" value="2" required>
                                     <i class="bi bi-emoji-frown"></i>
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <label>
-                                    <input class="form-check-input" type="radio" name="estadoLibros" id="v3" value="3">
+                                    <input class="form-check-input" type="radio" name="estadoLibros" id="v3" value="3" required>
                                     <i class="bi bi-emoji-neutral"></i>
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <label>
-                                    <input class="form-check-input" type="radio" name="estadoLibros" id="v4" value="4">
+                                    <input class="form-check-input" type="radio" name="estadoLibros" id="v4" value="4" required>
                                     <i class="bi bi-emoji-smile"></i>
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <label>
-                                    <input class="form-check-input" type="radio" name="estadoLibros" id="v5" value="5">
+                                    <input class="form-check-input" type="radio" name="estadoLibros" id="v5" value="5" required>
                                     <i class="bi bi-emoji-laughing"></i>
                                 </label>
                             </div>      
@@ -174,31 +174,31 @@
                         <div>
                             <div class="form-check form-check-inline">
                                 <label>
-                                    <input class="form-check-input" type="radio" name="actualidad" id="v1" value="1">
+                                    <input class="form-check-input" type="radio" name="actualidad" id="v1" value="1" required>
                                     <i class="bi bi-emoji-angry"></i>
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <label>
-                                    <input class="form-check-input" type="radio" name="actualidad" id="v2" value="2">
+                                    <input class="form-check-input" type="radio" name="actualidad" id="v2" value="2" required>
                                     <i class="bi bi-emoji-frown"></i>
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <label>
-                                    <input class="form-check-input" type="radio" name="actualidad" id="v3" value="3">
+                                    <input class="form-check-input" type="radio" name="actualidad" id="v3" value="3" required>
                                     <i class="bi bi-emoji-neutral"></i>
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <label>
-                                    <input class="form-check-input" type="radio" name="actualidad" id="v4" value="4">
+                                    <input class="form-check-input" type="radio" name="actualidad" id="v4" value="4" required>
                                     <i class="bi bi-emoji-smile"></i>
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <label>
-                                    <input class="form-check-input" type="radio" name="actualidad" id="v5" value="5">
+                                    <input class="form-check-input" type="radio" name="actualidad" id="v5" value="5" required>
                                     <i class="bi bi-emoji-laughing"></i>
                                 </label>
                             </div>      
@@ -207,31 +207,31 @@
                         <div>
                             <div class="form-check form-check-inline">
                                 <label>
-                                    <input class="form-check-input" type="radio" name="dotacion" id="v1" value="1">
+                                    <input class="form-check-input" type="radio" name="dotacion" id="v1" value="1" required>
                                     <i class="bi bi-emoji-angry"></i>
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <label>
-                                    <input class="form-check-input" type="radio" name="dotacion" id="v2" value="2">
+                                    <input class="form-check-input" type="radio" name="dotacion" id="v2" value="2" required>
                                     <i class="bi bi-emoji-frown"></i>
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <label>
-                                    <input class="form-check-input" type="radio" name="dotacion" id="v3" value="3">
+                                    <input class="form-check-input" type="radio" name="dotacion" id="v3" value="3" required>
                                     <i class="bi bi-emoji-neutral"></i>
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <label>
-                                    <input class="form-check-input" type="radio" name="dotacion" id="v4" value="4">
+                                    <input class="form-check-input" type="radio" name="dotacion" id="v4" value="4" required>
                                     <i class="bi bi-emoji-smile"></i>
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <label>
-                                    <input class="form-check-input" type="radio" name="dotacion" id="v5" value="5">
+                                    <input class="form-check-input" type="radio" name="dotacion" id="v5" value="5" required>
                                     <i class="bi bi-emoji-laughing"></i>
                                 </label>
                             </div>      

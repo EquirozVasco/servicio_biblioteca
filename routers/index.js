@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 //const _mysql =require('../services/mysql.service');
 const _pg = require('../services/postgress.service')
+const alert  = require('alert');
 
 
 router.use(express.json());  
@@ -41,15 +42,18 @@ router.post("/Prestamo", async (req, res) => {
         tipo
     });
   
-      if(!atencionp || !procesop || !disponibilidad || !estadoLibros || !actualidad || !dotacion || !tipo){
+      if(!atencionp || !procesop || !disponibilidad || !estadoLibros || !actualidad || !dotacion){
+        errors.push({ message: "Espacio Vacio" });
+      }
+      if(tipo == 'Tipo de usuario'){
         errors.push({ message: "Espacio Vacio" });
       }
 
   
       if(errors.length > 0){
-        res.render('encuestaPrestamo.html', {errors})
+        alert("Complete todos los campos")
+        //res.render('encuestaPrestamo.html', {errors})
       } else {
-
         let sql = `INSERT INTO prestamo
         (atencionpersonal,
         procedimientoprestamo,
@@ -115,13 +119,17 @@ router.post("/Espacios", async (req, res) => {
     tipo
   });
 
-    if(!iluminacion || !temperatura || !ruido || !limpieza || !estado || !instructivos || !seniales || !tipo){
+    if(!iluminacion || !temperatura || !ruido || !limpieza || !estado || !instructivos || !seniales){
       errors.push({ message: "Espacio Vacio" });
     }
 
+    if(tipo == 'Tipo de usuario'){
+      errors.push({ message: "Espacio Vacio" });
+    }
 
     if(errors.length > 0){
-      res.render('encuestaEspacios.html', {errors})
+      alert("Complete todos los campos")
+      //res.render('encuestaEspacios.html', {errors})
     } else {
 
       let sql = `INSERT INTO espacio
@@ -185,16 +193,20 @@ router.post("/Renovaciones", async (req, res) => {
     if(!atencionr || !procesor || !horario || !tipo){
       errors.push({ message: "Espacio Vacio" });
     }
+    if(tipo == 'Tipo de usuario'){
+      errors.push({ message: "Espacio Vacio" });
+    }
 
 
     if(errors.length > 0){
-      res.render('encuestaRenovacion.html', {errors})
+      alert("Complete todos los campos")
+      //res.render('encuestaRenovacion.html', {errors})
     } else {
 
       let sql = `INSERT INTO renovacion
       (atencionpersonal,
         procedimientorenovacion,
-        horariosatencion,
+        horarioatencion,
         idcliente,
         comentarios,
         fecha)
@@ -239,13 +251,17 @@ router.post("/Cubiculos", async (req, res) => {
     tipo 
   });
 
-    if(!atencion || !proceso || !tipo){
+    if(!atencion || !proceso){
+      errors.push({ message: "Espacio Vacio" });
+    }
+    if(tipo == 'Tipo de usuario'){
       errors.push({ message: "Espacio Vacio" });
     }
 
 
     if(errors.length > 0){
-      res.render('encuestaCubiculos.html', {errors})
+      alert("Complete todos los campos")
+      //res.render('encuestaCubiculos.html', {errors})
     } else {
 
       let sql = `INSERT INTO reserva_cubiculos
@@ -310,6 +326,7 @@ router.post("/Sesion", async (req, res) => {
       let rows = response.rows
 
       if (rows.length == 0) {
+        alert("La Contraseña o Usuario son Incorrectos")
         errors.push({ message: "La Contraseña o Usuario son Incorrectos" });
         res.redirect('/Sesion')
       }else{
@@ -318,9 +335,73 @@ router.post("/Sesion", async (req, res) => {
     }
 });
 
+
 //Ruta Página Admin
 router.get('/Admin', (req, res) => {
-  res.render('biblioteca.html')
+  res.render('admin.html')
+  
 })
+
+router.get('/Reportes', (req, res) => {
+  res.render('biblioteca.html')
+  
+})
+
+const reporte = require('../controllers/report.controller')
+const reporte2 = require('../controllers/reportR.controller')
+const reporte3 = require('../controllers/reportE.controller')
+const reporte4 = require('../controllers/reportC.controller')
+
+router.post("/Reportes", async (req, res) => {
+  let { fechaI,
+    fechaF,
+    tipo} = req.body;
+
+  let errors = [];
+  
+  console.log({
+    fechaI,
+    fechaF,
+    tipo
+  });
+
+  const tiempoTranscurrido = Date.now();
+  var hoy = new Date(tiempoTranscurrido);
+  hoy = hoy.toLocaleDateString('en-CA')
+
+  if(fechaI > hoy || fechaF > hoy){
+    alert("Ingrese un rango de fechas válidas (Máximo hasta: " + hoy + " )")
+    errors.push({ message: "Fecha fuera del rango" });
+    res.redirect('/Reportes')
+  }else if(tipo == 'Selecciona'){
+    alert("Por favor seleccione el tipo de reporte")
+    errors.push({ message: "Seleccione el tipo" });
+    res.redirect('/Reportes')
+  }else {
+    let fechas = {fechaI, fechaF}
+    switch(tipo){
+      case "1":
+        return await reporte.getReportPrestamo(req, res, fechas);
+        break;
+      
+      case "2":
+      return await reporte2.getReportRenovacion(req, res, fechas);
+        break;
+
+      case "3":
+        return await reporte3.getReportEspacio(req, res, fechas);
+        break;
+      
+      case "4":
+        return await reporte4.getReportCubiculos(req, res, fechas);
+        break;
+    }
+
+    return res.redirect("/Inicio");
+  }
+});
+
+
+//router.get("/reportes", informe.getInfoCubiculos);
 
 module.exports = router;

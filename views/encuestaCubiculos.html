@@ -7,7 +7,7 @@
     <%- include('partials/head.html'); %>
     <title>Reserva de Cubículos</title>
 </head>
-<body>
+<body class="letra">
     
     <%- include('partials/header.html'); %>
 
@@ -28,7 +28,7 @@
                               </svg></a>
                         </div>
                         <p>Seleccione el tipo de usuario</p>
-                            <select class="form-select mytype" aria-label="Default select example" name="tipo">
+                            <select class="form-select mytype" aria-label="Default select example" name="tipo" required>
                                 <option selected>Tipo de usuario</option>
                                 <option value="1">Estudiante</option>
                                 <option value="2">Docente</option>
@@ -42,31 +42,31 @@
                         <div>
                             <div class="form-check form-check-inline">
                                 <label>
-                                    <input class="form-check-input" type="radio" name="atencion" id="v1" value="1">
+                                    <input class="form-check-input" type="radio" name="atencion" id="v1" value="1" required>
                                     <i class="bi bi-emoji-angry"></i>
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <label>
-                                    <input class="form-check-input" type="radio" name="atencion" id="v2" value="2">
+                                    <input class="form-check-input" type="radio" name="atencion" id="v2" value="2" required>
                                     <i class="bi bi-emoji-frown"></i>
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <label>
-                                    <input class="form-check-input" type="radio" name="atencion" id="v3" value="3">
+                                    <input class="form-check-input" type="radio" name="atencion" id="v3" value="3" required>
                                     <i class="bi bi-emoji-neutral"></i>
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <label>
-                                    <input class="form-check-input" type="radio" name="atencion" id="v4" value="4">
+                                    <input class="form-check-input" type="radio" name="atencion" id="v4" value="4" required>
                                     <i class="bi bi-emoji-smile"></i>
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <label>
-                                    <input class="form-check-input" type="radio" name="atencion" id="v5" value="5">
+                                    <input class="form-check-input" type="radio" name="atencion" id="v5" value="5" required>
                                     <i class="bi bi-emoji-laughing"></i>
                                 </label>
                             </div>      
@@ -75,31 +75,31 @@
                         <div>
                             <div class="form-check form-check-inline">
                                 <label>
-                                    <input class="form-check-input" type="radio" name="proceso" id="v1" value="1">
+                                    <input class="form-check-input" type="radio" name="proceso" id="v1" value="1" required  >
                                     <i class="bi bi-emoji-angry"></i>
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <label>
-                                    <input class="form-check-input" type="radio" name="proceso" id="v2" value="2">
+                                    <input class="form-check-input" type="radio" name="proceso" id="v2" value="2" required  >
                                     <i class="bi bi-emoji-frown"></i>
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <label>
-                                    <input class="form-check-input" type="radio" name="proceso" id="v3" value="3">
+                                    <input class="form-check-input" type="radio" name="proceso" id="v3" value="3" required  >
                                     <i class="bi bi-emoji-neutral"></i>
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <label>
-                                    <input class="form-check-input" type="radio" name="proceso" id="v4" value="4">
+                                    <input class="form-check-input" type="radio" name="proceso" id="v4" value="4" required  >
                                     <i class="bi bi-emoji-smile"></i>
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <label>
-                                    <input class="form-check-input" type="radio" name="proceso" id="v5" value="5">
+                                    <input class="form-check-input" type="radio" name="proceso" id="v5" value="5" required  >
                                     <i class="bi bi-emoji-laughing"></i>
                                 </label>
                             </div>      
